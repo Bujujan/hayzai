@@ -92,7 +92,7 @@ export default function HomePage() {
                   Montée en Charge Maîtrisée
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Gérez les pics d'activité sans recruter. Scalabilité
+                  Gérez les pics d&apos;activité sans recruter. Scalabilité
                   automatique pour une croissance sereine.
                 </p>
               </CardContent>
@@ -238,8 +238,9 @@ export default function HomePage() {
               Prêt à Transformer Votre Business ?
             </h2>
             <p className="text-xl text-muted-foreground text-balance mb-12">
-              Chaque prospect mérite votre excellence. Obtenez votre "Agent
-              Personnel" IA pour développer sans limites et vendre sans stress.
+              Chaque prospect mérite votre excellence. Obtenez votre &quot;Agent
+              Personnel&quot; IA pour développer sans limites et vendre sans
+              stress.
             </p>
 
             <Card className="p-8 bg-card/80 backdrop-blur-sm border-0 shadow-xl">
