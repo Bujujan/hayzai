@@ -56,9 +56,9 @@ export default function HomePage() {
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
               Chaque Prospect Mérite Votre Excellence
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Obtenez Votre "Agent Personnel" IA pour Développer Sans Limites et
-              Vendre Sans Stress
+            <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
+              Obtenez Votre &quot;Agent Personnel&quot; IA pour Développer Sans
+              Limites et Vendre Sans Stress
             </p>
           </div>
 
