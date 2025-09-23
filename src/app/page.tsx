@@ -10,6 +10,9 @@ import {
   Users,
   BarChart3,
   Shield,
+  Sparkle,
+  Bot,
+  Clock10,
 } from "lucide-react";
 
 export default function HomePage() {
@@ -17,14 +20,16 @@ export default function HomePage() {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="py-20 px-4 text-center relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5">
-        <div className="container mx-auto relative z-10">
+        <div className="container mx-auto relative z-10 flex flex-col items-center">
           <Badge className="mb-6 text-sm font-medium text-primary bg-primary/10">
             Intelligence Artificielle • Conseil Business
           </Badge>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
-            Transformez Votre Business avec l&apos;
-            <span className="text-primary">IA</span>
-          </h1>
+          <div className="flex justify-center items-center w-[80%]">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
+              Transformez Votre Agence Immobilière avec l&apos;
+              <span className="text-primary">IA</span>
+            </h1>
+          </div>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
             Maximisez votre ROI, optimisez vos performances et prenez
             l&apos;avantage concurrentiel grâce à notre expertise en
@@ -40,6 +45,112 @@ export default function HomePage() {
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Chatbot IA Immobilier Section */}
+      <section id="chatbot-ia" className="py-20 px-4 bg-background">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+              Chaque Prospect Mérite Votre Excellence
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Obtenez Votre "Agent Personnel" IA pour Développer Sans Limites et
+              Vendre Sans Stress
+            </p>
+          </div>
+
+          {/* Advantages Grid */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                icon: <Clock10 className="h-10 w-10 text-primary" />,
+                title: "Disponibilité 24/7 & Capture de Leads",
+                points: [
+                  "Réactivité Instantanée : +200% de leads qualifiés capturés même hors horaires",
+                  "Jamais de Lead Manqué : 78% des clients achètent chez le professionnel qui répond en premier",
+                  "Recherche Immédiate : Recommandations personnalisées de biens en temps réel",
+                ],
+              },
+              {
+                icon: <TrendingUp className="h-10 w-10 text-primary" />,
+                title: "Qualification & Conversion Intelligente",
+                points: [
+                  "Scoring Automatique : Tri automatique selon budget, localisation et maturité du projet",
+                  "Taux de Conversion Amélioré : +50% de transformation prospects en clients",
+                  "Pré-qualification Hypothécaire : Accompagnement automatique des étapes de financement",
+                ],
+              },
+              {
+                icon: <Sparkle className="h-10 w-10 text-primary" />,
+                title: "Efficacité Opérationnelle",
+                points: [
+                  "Économie de 15h/semaine : Automatisation des tâches répétitives",
+                  "Gain de Productivité 20-30% : Plus de temps pour les activités à forte valeur",
+                  "Gestion Simultanée : Milliers de conversations en parallèle",
+                ],
+              },
+            ].map((item, idx) => (
+              <Card
+                key={idx}
+                className="group border border-border bg-card/50 backdrop-blur-md rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all"
+              >
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+                  <ul className="text-muted-foreground text-left list-disc list-inside space-y-2">
+                    {item.points.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Email Outreach & Marketing Grid */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                icon: <Users className="h-10 w-10 text-accent" />,
+                title: "Nurturing Personnalisé",
+                points: [
+                  "Séquences 90 Jours : Suivi automatique des prospects dans la durée",
+                  "Alertes Ciblées : Notifications personnalisées selon les critères clients",
+                  "Intégration CRM : Synchronisation complète des données et communications",
+                ],
+              },
+              {
+                icon: <Bot className="h-10 w-10 text-accent" />,
+                title: "Marketing Automatisé",
+                points: [
+                  "Actualités Quartier : Informations régulières pour rester top-of-mind",
+                  "Diffusion d'Annonces : Notifications instantanées des nouveaux biens",
+                  "Campagnes de Conversion : Accompagnement complet du parcours client",
+                ],
+              },
+            ].map((item, idx) => (
+              <Card
+                key={idx}
+                className="group border border-border bg-card/50 backdrop-blur-md rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all"
+              >
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+                  <ul className="text-muted-foreground text-left list-disc list-inside space-y-2">
+                    {item.points.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -134,58 +245,6 @@ export default function HomePage() {
                   </div>
                   <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    {item.desc}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Core Values */}
-      <section id="valeurs" className="py-20 px-4 bg-muted/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-              Valeurs Fondamentales
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Les principes qui guident notre approche
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: "🎯",
-                title: "Excellence Continue",
-                desc: "Votre niveau de service, 24h/24",
-              },
-              {
-                icon: "⚖️",
-                title: "Équilibre Parfait",
-                desc: "Performance ET bien-être",
-              },
-              {
-                icon: "🔄",
-                title: "Innovation Humaine",
-                desc: "La tech qui amplifie votre talent",
-              },
-              {
-                icon: "🤝",
-                title: "Partenariat Durable",
-                desc: "Votre succès = Notre succès",
-              },
-            ].map((item, idx) => (
-              <Card
-                key={idx}
-                className="text-center group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-border bg-card/60 backdrop-blur-md rounded-xl"
-              >
-                <CardContent className="p-8">
-                  <div className="text-4xl mb-4">{item.icon}</div>
-                  <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
                     {item.desc}
                   </p>
                 </CardContent>

@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-foreground/20 mt-8 pt-8 text-center text-foreground/60">
-          <p>&copy; 2025 AIConseil. Tous droits réservés.</p>
+          <p>&copy; 2025 HAYZAI. Tous droits réservés.</p>
         </div>
       </div>
     </footer>
