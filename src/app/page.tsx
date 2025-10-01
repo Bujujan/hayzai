@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
 import {
   ArrowRight,
   Target,
@@ -14,40 +13,13 @@ import {
   Bot,
   Clock10,
 } from "lucide-react";
+import Hero from "@/components/Hero";
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="py-20 px-4 text-center relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5">
-        <div className="container mx-auto relative z-10 flex flex-col items-center">
-          <Badge className="mb-6 text-sm font-medium text-primary bg-primary/10">
-            Intelligence Artificielle • Conseil Business
-          </Badge>
-          <div className="flex justify-center items-center w-[80%]">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
-              Transformez Votre Agence Immobilière avec l&apos;
-              <span className="text-primary">IA</span>
-            </h1>
-          </div>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
-            Maximisez votre ROI, optimisez vos performances et prenez
-            l&apos;avantage concurrentiel grâce à notre expertise en
-            intelligence artificielle
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="#contact">
-              <Button
-                size="lg"
-                className="text-lg tracking-wide px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl shadow-md group"
-              >
-                Consultation Gratuite
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </a>
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* Chatbot IA Immobilier Section */}
       <section id="chatbot-ia" className="py-20 px-4 bg-background">

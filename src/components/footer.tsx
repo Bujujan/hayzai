@@ -1,13 +1,19 @@
+import Image from "next/image";
 import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="py-12 px-4 bg-background text-foreground dark">
+    <footer className="py-12 px-4 bg-background text-foreground">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <div className="text-2xl font-bold mb-4">
-              HAYZ<span className="text-accent">AI</span>
+            <div className="mb-4">
+              <Image
+                src="/images/logo.png"
+                alt="Logo"
+                width={140}
+                height={100}
+              />
             </div>
             <p className="text-foreground/80 leading-relaxed">
               Votre partenaire en transformation digitale et intelligence
