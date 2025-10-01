@@ -260,7 +260,7 @@ export default function HomePage() {
                   </div>
                   <Button
                     size="lg"
-                    className="w-full text-lg tracking-wide py-6 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl shadow-md group"
+                    className="w-full text-lg tracking-wide py-6 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl shadow-md group hover:cursor-pointer"
                   >
                     Démarrer ma Transformation IA
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

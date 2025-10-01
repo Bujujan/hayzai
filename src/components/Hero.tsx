@@ -31,7 +31,7 @@ const Hero = () => {
           <a href="#contact">
             <Button
               size="lg"
-              className="text-lg tracking-wide px-8 py-6 bg-primary hover:bg-primary/90 text-white rounded-xl shadow-md group"
+              className="text-lg tracking-wide px-8 py-6 bg-primary hover:bg-primary/90 text-white rounded-xl shadow-md group hover:cursor-pointer"
             >
               Consultation Gratuite
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
