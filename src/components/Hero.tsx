@@ -13,7 +13,7 @@ const Hero = () => {
       <div></div>
       <div className="container mx-auto relative z-10 flex flex-col items-center">
         <Badge className="mb-6 text-sm font-medium text-primary bg-primary/10">
-          Intelligence Artificielle • Service d'automatisation
+          Intelligence Artificielle • Service d&apos;automatisation
         </Badge>
         <Herotext />
         {/* <div className="flex justify-center items-center w-[80%]">
