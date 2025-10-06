@@ -6,15 +6,15 @@ import { Input } from "./ui/input";
 import { Card, CardContent } from "./ui/card";
 
 const Cta = () => {
-  async function handleSubmit(event: any) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.currentTarget);
 
     formData.append("access_key", "563259f2-3323-435e-a68f-bdc5448c5dc9");
     formData.append("from_name", "Hayz AI");
     formData.append("subject", "New Contact Form Submission");
 
-    const object = Object.fromEntries(formData);
+    const object = Object.fromEntries(formData.entries());
     const json = JSON.stringify(object);
 
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -25,6 +25,7 @@ const Cta = () => {
       },
       body: json,
     });
+
     const result = await response.json();
     if (result.success) {
       console.log(result);
