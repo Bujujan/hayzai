@@ -3,13 +3,13 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="py-12 px-4 bg-background text-foreground">
+    <footer className="py-12 px-4 text-foreground">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <div className="mb-4">
               <Image
-                src="/images/logo.png"
+                src="/images/hayz-logo.png"
                 alt="Logo"
                 width={140}
                 height={100}

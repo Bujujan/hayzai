@@ -25,14 +25,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="">
-      <Header />
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className="min-h-screen w-full bg-black relative">
+        {/* Dark White Dotted Grid Background */}
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            background: "#000000",
+            backgroundImage: `
+        radial-gradient(circle, rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px)
+      `,
+            backgroundSize: "30px 30px",
+            backgroundPosition: "0 0",
+          }}
+        />
+
+        {/* Page Content */}
+        <div className="relative z-10 min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </div>
       </body>
-      <Footer />
     </html>
   );
 }
