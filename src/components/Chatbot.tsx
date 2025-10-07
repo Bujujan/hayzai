@@ -1,117 +1,246 @@
-import { Bot, Clock10, Sparkle, TrendingUp, Users } from "lucide-react";
+import {
+  ArrowRight,
+  Bot,
+  Clock10,
+  Sparkle,
+  TrendingUp,
+  Users,
+  Zap,
+} from "lucide-react";
 import React from "react";
 import { Card, CardContent } from "./ui/card";
 
 const Chatbot = () => {
+  const features = [
+    {
+      icon: Clock10,
+      title: "Disponibilité 24/7 & Capture de Leads",
+      description:
+        "Ne manquez plus jamais une opportunité. Votre assistant IA répond instantanément à chaque prospect.",
+      stats: { value: "+200%", label: "leads qualifiés" },
+      highlights: [
+        "Réactivité instantanée même hors horaires",
+        "78% des clients choisissent qui répond en premier",
+        "Recommandations personnalisées en temps réel",
+      ],
+      gradient: "from-blue-500/10 via-cyan-500/10 to-blue-500/10",
+      accentColor: "text-blue-600",
+      bgAccent: "bg-blue-500/5",
+    },
+    {
+      icon: TrendingUp,
+      title: "Qualification & Conversion Intelligente",
+      description:
+        "Transformez plus de prospects en clients grâce à une qualification automatique et intelligente.",
+      stats: { value: "+50%", label: "de conversion" },
+      highlights: [
+        "Scoring automatique selon budget et maturité",
+        "Priorisation des leads à fort potentiel",
+        "Accompagnement du financement hypothécaire",
+      ],
+      gradient: "from-emerald-500/10 via-green-500/10 to-emerald-500/10",
+      accentColor: "text-emerald-600",
+      bgAccent: "bg-emerald-500/5",
+    },
+    {
+      icon: Sparkle,
+      title: "Efficacité Opérationnelle",
+      description:
+        "Automatisez les tâches répétitives et concentrez-vous sur ce qui compte vraiment.",
+      stats: { value: "15h", label: "économisées/semaine" },
+      highlights: [
+        "Automatisation complète des tâches répétitives",
+        "20-30% de gain de productivité",
+        "Gestion de milliers de conversations simultanées",
+      ],
+      gradient: "from-purple-500/10 via-pink-500/10 to-purple-500/10",
+      accentColor: "text-purple-600",
+      bgAccent: "bg-purple-500/5",
+    },
+    {
+      icon: Users,
+      title: "Nurturing Personnalisé",
+      description:
+        "Maintenez l'engagement de vos prospects sur le long terme avec un suivi automatisé et personnalisé.",
+      stats: { value: "90j", label: "de suivi automatique" },
+      highlights: [
+        "Séquences d'emails sur 90 jours",
+        "Alertes ciblées selon les critères clients",
+        "Synchronisation CRM complète",
+      ],
+      gradient: "from-orange-500/10 via-amber-500/10 to-orange-500/10",
+      accentColor: "text-orange-600",
+      bgAccent: "bg-orange-500/5",
+    },
+    {
+      icon: Bot,
+      title: "Marketing Automatisé",
+      description:
+        "Restez top-of-mind avec des campagnes marketing intelligentes et automatisées.",
+      stats: { value: "∞", label: "campagnes actives" },
+      highlights: [
+        "Actualités de quartier automatiques",
+        "Diffusion instantanée des nouvelles annonces",
+        "Parcours client complet automatisé",
+      ],
+      gradient: "from-rose-500/10 via-red-500/10 to-rose-500/10",
+      accentColor: "text-rose-600",
+      bgAccent: "bg-rose-500/5",
+    },
+  ];
+
   return (
     <section
       id="chatbot-ia"
-      className="py-20 px-4 w-full"
-      // style={{
-      //   backgroundImage: `url('/images/image-mesh-gradient-reverse.jpg')`,
-      // }}
+      className="py-20 px-4 w-full relative overflow-hidden"
     >
-      <div className="container mx-auto rounded-4xl px-24 py-24 ">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-              Chaque Prospect Mérite Votre Excellence
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              Obtenez Votre &quot;Agent Personnel&quot; IA pour Développer Sans
-              Limites et Vendre Sans Stress
+      {/* Background decoration */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-border to-transparent opacity-50" />
+        <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-border to-transparent opacity-50" />
+      </div>
+
+      <div className="container mx-auto max-w-6xl">
+        {/* Header */}
+        <div className="text-center mb-20 space-y-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10">
+            <Zap className="h-4 w-4 text-primary" />
+            <span className="text-sm font-medium">
+              Intelligence Artificielle
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-balance leading-tight">
+            Chaque Prospect Mérite
+            <br />
+            <span className="text-primary">Votre Excellence</span>
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Obtenez votre &quot;Agent Personnel&quot; IA pour développer sans
+            limites et vendre sans stress
+          </p>
+        </div>
+
+        {/* Alternating Features */}
+        <div className="space-y-24">
+          {features.map((feature, idx) => {
+            const Icon = feature.icon;
+            const isEven = idx % 2 === 0;
+
+            return (
+              <div
+                key={idx}
+                className={`flex flex-col ${
+                  isEven ? "lg:flex-row" : "lg:flex-row-reverse"
+                } gap-12 items-center group`}
+              >
+                {/* Visual Side */}
+                <div className="flex-1 relative">
+                  <div
+                    className={`relative aspect-square rounded-3xl bg-gradient-to-br ${feature.gradient} border border-border/50 p-12 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-500`}
+                  >
+                    {/* Decorative grid */}
+                    <div className="absolute inset-0 opacity-10">
+                      <div
+                        className="absolute inset-0"
+                        style={{
+                          backgroundImage:
+                            "radial-gradient(circle, currentColor 1px, transparent 1px)",
+                          backgroundSize: "24px 24px",
+                        }}
+                      />
+                    </div>
+
+                    {/* Large icon */}
+                    <div className="relative z-10">
+                      <div
+                        className={`w-32 h-32 rounded-3xl ${feature.bgAccent} backdrop-blur-sm flex items-center justify-center group-hover:rotate-6 transition-transform duration-500`}
+                      >
+                        <Icon className={`h-16 w-16 ${feature.accentColor}`} />
+                      </div>
+                    </div>
+
+                    {/* Floating stats badge */}
+                    <div className="absolute top-8 right-8 bg-background/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-border">
+                      <div className="text-3xl font-bold">
+                        {feature.stats.value}
+                      </div>
+                      <div className="text-xs text-muted-foreground">
+                        {feature.stats.label}
+                      </div>
+                    </div>
+
+                    {/* Decorative elements */}
+                    <div
+                      className={`absolute -bottom-4 -left-4 w-24 h-24 rounded-full ${feature.bgAccent} blur-2xl`}
+                    />
+                    <div
+                      className={`absolute -top-4 -right-4 w-32 h-32 rounded-full ${feature.bgAccent} blur-3xl`}
+                    />
+                  </div>
+                </div>
+
+                {/* Content Side */}
+                <div className="flex-1 space-y-6">
+                  <div className="space-y-3">
+                    <div
+                      className={`inline-flex items-center gap-2 px-3 py-1 rounded-full ${feature.bgAccent} border border-border/50`}
+                    >
+                      <span
+                        className={`text-xs font-semibold ${feature.accentColor}`}
+                      >
+                        Fonctionnalité {idx + 1}
+                      </span>
+                    </div>
+                    <h3 className="text-3xl md:text-4xl font-bold text-balance leading-tight">
+                      {feature.title}
+                    </h3>
+                    <p className="text-lg text-muted-foreground leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+
+                  {/* Highlights */}
+                  <div className="space-y-3">
+                    {feature.highlights.map((highlight, i) => (
+                      <div
+                        key={i}
+                        className="flex items-start gap-3 p-3 rounded-xl hover:bg-accent/50 transition-colors group/item"
+                      >
+                        <div
+                          className={`flex-shrink-0 w-6 h-6 rounded-full ${feature.bgAccent} flex items-center justify-center mt-0.5`}
+                        >
+                          <ArrowRight
+                            className={`h-3 w-3 ${feature.accentColor} group-hover/item:translate-x-0.5 transition-transform`}
+                          />
+                        </div>
+                        <p className="text-sm leading-relaxed">{highlight}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-24 text-center">
+          <div className="inline-flex flex-col items-center gap-4 p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 border border-border">
+            <p className="text-lg font-medium">
+              Rejoignez les professionnels qui transforment leur activité avec
+              l&apos;IA
             </p>
-          </div>
-
-          {/* Advantages Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {[
-              {
-                icon: <Clock10 className="h-10 w-10 text-primary" />,
-                title: "Disponibilité 24/7 & Capture de Leads",
-                points: [
-                  "Réactivité Instantanée : +200% de leads qualifiés capturés même hors horaires",
-                  "Jamais de Lead Manqué : 78% des clients achètent chez le professionnel qui répond en premier",
-                  "Recherche Immédiate : Recommandations personnalisées de biens en temps réel",
-                ],
-              },
-              {
-                icon: <TrendingUp className="h-10 w-10 text-primary" />,
-                title: "Qualification & Conversion Intelligente",
-                points: [
-                  "Scoring Automatique : Tri automatique selon budget, localisation et maturité du projet",
-                  "Taux de Conversion Amélioré : +50% de transformation prospects en clients",
-                  "Pré-qualification Hypothécaire : Accompagnement automatique des étapes de financement",
-                ],
-              },
-              {
-                icon: <Sparkle className="h-10 w-10 text-primary" />,
-                title: "Efficacité Opérationnelle",
-                points: [
-                  "Économie de 15h/semaine : Automatisation des tâches répétitives",
-                  "Gain de Productivité 20-30% : Plus de temps pour les activités à forte valeur",
-                  "Gestion Simultanée : Milliers de conversations en parallèle",
-                ],
-              },
-            ].map((item, idx) => (
-              <Card
-                key={idx}
-                className="group border border-border bg-card/50 backdrop-blur-md rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all"
-              >
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
-                    {item.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-                  <ul className="text-muted-foreground text-left list-disc list-inside space-y-2">
-                    {item.points.map((point, i) => (
-                      <li key={i}>{point}</li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Email Outreach & Marketing Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                icon: <Users className="h-10 w-10 text-primary" />,
-                title: "Nurturing Personnalisé",
-                points: [
-                  "Séquences 90 Jours : Suivi automatique des prospects dans la durée",
-                  "Alertes Ciblées : Notifications personnalisées selon les critères clients",
-                  "Intégration CRM : Synchronisation complète des données et communications",
-                ],
-              },
-              {
-                icon: <Bot className="h-10 w-10 text-primary" />,
-                title: "Marketing Automatisé",
-                points: [
-                  "Actualités Quartier : Informations régulières pour rester top-of-mind",
-                  "Diffusion d'Annonces : Notifications instantanées des nouveaux biens",
-                  "Campagnes de Conversion : Accompagnement complet du parcours client",
-                ],
-              },
-            ].map((item, idx) => (
-              <Card
-                key={idx}
-                className="group border border-border bg-card/50 backdrop-blur-md rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all"
-              >
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors">
-                    {item.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-                  <ul className="text-muted-foreground text-left list-disc list-inside space-y-2">
-                    {item.points.map((point, i) => (
-                      <li key={i}>{point}</li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <div className="flex -space-x-2">
+                {[1, 2, 3, 4].map((i) => (
+                  <div
+                    key={i}
+                    className="w-8 h-8 rounded-full bg-primary/20 border-2 border-background"
+                  />
+                ))}
+              </div>
+              <span>+500 agents immobiliers nous font confiance</span>
+            </div>
           </div>
         </div>
       </div>

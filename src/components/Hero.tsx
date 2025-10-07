@@ -37,7 +37,7 @@ const Hero = () => {
 
       <div className="flex justify-center items-center">
         <div className="container pl-24 relative z-10 flex flex-col">
-          <Badge className="mb-6 text-sm font-medium text-white/80 bg-primary/30">
+          <Badge className="mb-6 text-sm font-medium text-white/80 bg-primary/10 rounded-full border border-primary/20">
             Intelligence Artificielle • Service d&apos;automatisation
           </Badge>
           <Herotext />
