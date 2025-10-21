@@ -53,7 +53,7 @@ const Roi = () => {
       {/* <div className="absolute top-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" /> */}
       {/* <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none" /> */}
 
-      <div className="container mx-auto rounded-4xl px-12 py-10 relative z-10">
+      <div className="container mx-auto rounded-4xl px-4 py-10 relative z-10">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">

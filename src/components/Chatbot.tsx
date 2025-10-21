@@ -92,7 +92,7 @@ const Chatbot = () => {
   return (
     <section
       id="chatbot-ia"
-      className="py-20 px-4 w-full relative overflow-hidden"
+      className="py-16 px-4 sm:px-6 md:px-8 w-full relative overflow-hidden"
     >
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
@@ -102,26 +102,26 @@ const Chatbot = () => {
 
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
-        <div className="text-center mb-20 space-y-6">
+        <div className="text-center mb-16 md:mb-20 space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10">
             <Zap className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium">
               Intelligence Artificielle
             </span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-balance leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight text-balance leading-tight">
             Chaque Prospect Mérite
             <br />
             <span className="text-primary">Votre Excellence</span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Obtenez votre &quot;Agent Personnel&quot; IA pour développer sans
             limites et vendre sans stress
           </p>
         </div>
 
-        {/* Alternating Features */}
-        <div className="space-y-24">
+        {/* Features */}
+        <div className="space-y-20 md:space-y-24">
           {features.map((feature, idx) => {
             const Icon = feature.icon;
             const isEven = idx % 2 === 0;
@@ -131,12 +131,12 @@ const Chatbot = () => {
                 key={idx}
                 className={`flex flex-col ${
                   isEven ? "lg:flex-row" : "lg:flex-row-reverse"
-                } gap-12 items-center group`}
+                } gap-10 sm:gap-12 items-center group`}
               >
                 {/* Visual Side */}
-                <div className="flex-1 relative sm:flex sm:justify-left">
+                <div className="flex-1 w-full max-w-sm sm:max-w-md lg:max-w-none">
                   <div
-                    className={`relative aspect-square sm:h-52 rounded-3xl bg-gradient-to-br ${feature.gradient} border border-border/50 p-12 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-500`}
+                    className={`relative aspect-square rounded-2xl sm:rounded-3xl bg-gradient-to-br ${feature.gradient} border border-border/50 p-8 sm:p-12 flex items-center justify-center overflow-hidden group-hover:scale-[1.03] transition-transform duration-500`}
                   >
                     {/* Decorative grid */}
                     <div className="absolute inset-0 opacity-10">
@@ -145,25 +145,25 @@ const Chatbot = () => {
                         style={{
                           backgroundImage:
                             "radial-gradient(circle, currentColor 1px, transparent 1px)",
-                          backgroundSize: "24px 24px",
+                          backgroundSize: "20px 20px",
                         }}
                       />
                     </div>
 
-                    {/* Large icon */}
+                    {/* Icon */}
                     <div className="relative z-10">
                       <div
-                        className={`w-32 h-32 rounded-3xl sm:rounded-xl sm:w-16 sm:h-16 ${feature.bgAccent} backdrop-blur-sm flex items-center justify-center group-hover:rotate-6 transition-transform duration-500`}
+                        className={`w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-2xl ${feature.bgAccent} backdrop-blur-sm flex items-center justify-center group-hover:rotate-6 transition-transform duration-500`}
                       >
                         <Icon
-                          className={`h-16 w-16 sm:h-8 sm:w-8 ${feature.accentColor}`}
+                          className={`h-10 w-10 sm:h-14 sm:w-14 md:h-16 md:w-16 ${feature.accentColor}`}
                         />
                       </div>
                     </div>
 
-                    {/* Floating stats badge */}
-                    <div className="absolute top-8 right-8 sm:top-1 sm:right-1 sm:rounded-xl sm:p-3 bg-background/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-border">
-                      <div className="text-3xl font-bold sm:text-sm">
+                    {/* Stats Badge */}
+                    <div className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-background/90 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-md border border-border text-center">
+                      <div className="text-xl sm:text-2xl font-bold">
                         {feature.stats.value}
                       </div>
                       <div className="text-xs text-muted-foreground">
@@ -171,18 +171,18 @@ const Chatbot = () => {
                       </div>
                     </div>
 
-                    {/* Decorative elements */}
+                    {/* Decorative lights */}
                     <div
-                      className={`absolute -bottom-4 -left-4 w-24 h-24 rounded-full ${feature.bgAccent} blur-2xl`}
+                      className={`absolute -bottom-4 -left-4 w-16 h-16 sm:w-24 sm:h-24 rounded-full ${feature.bgAccent} blur-2xl`}
                     />
                     <div
-                      className={`absolute -top-4 -right-4 w-32 h-32 rounded-full ${feature.bgAccent} blur-3xl`}
+                      className={`absolute -top-4 -right-4 w-20 h-20 sm:w-32 sm:h-32 rounded-full ${feature.bgAccent} blur-3xl`}
                     />
                   </div>
                 </div>
 
                 {/* Content Side */}
-                <div className="flex-1 space-y-6">
+                <div className="flex-1 space-y-6 text-center lg:text-left">
                   <div className="space-y-3">
                     <div
                       className={`inline-flex items-center gap-2 px-3 py-1 rounded-full ${feature.bgAccent} border border-border/50`}
@@ -193,20 +193,20 @@ const Chatbot = () => {
                         Fonctionnalité {idx + 1}
                       </span>
                     </div>
-                    <h3 className="text-3xl md:text-4xl font-bold text-balance leading-tight">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
                       {feature.title}
                     </h3>
-                    <p className="text-lg text-muted-foreground leading-relaxed">
+                    <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
 
                   {/* Highlights */}
-                  <div className="space-y-3">
+                  <div className="space-y-3 sm:space-y-4">
                     {feature.highlights.map((highlight, i) => (
                       <div
                         key={i}
-                        className="flex items-start gap-3 p-3 rounded-xl hover:bg-accent/50 transition-colors group/item"
+                        className="flex items-start gap-3 p-3 rounded-xl hover:bg-accent/50 transition-colors group/item text-left"
                       >
                         <div
                           className={`flex-shrink-0 w-6 h-6 rounded-full ${feature.bgAccent} flex items-center justify-center mt-0.5`}
@@ -215,7 +215,9 @@ const Chatbot = () => {
                             className={`h-3 w-3 ${feature.accentColor} group-hover/item:translate-x-0.5 transition-transform`}
                           />
                         </div>
-                        <p className="text-sm leading-relaxed">{highlight}</p>
+                        <p className="text-sm sm:text-base leading-relaxed">
+                          {highlight}
+                        </p>
                       </div>
                     ))}
                   </div>
@@ -225,19 +227,19 @@ const Chatbot = () => {
           })}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-24 text-center">
-          <div className="inline-flex flex-col items-center gap-4 p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 border border-border">
-            <p className="text-lg font-medium">
+        {/* CTA */}
+        <div className="mt-20 sm:mt-24 text-center">
+          <div className="inline-flex flex-col items-center gap-4 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 border border-border w-full sm:w-auto">
+            <p className="text-base sm:text-lg font-medium">
               Rejoignez les professionnels qui transforment leur activité avec
               l&apos;IA
             </p>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <div className="flex flex-wrap items-center justify-center gap-2 text-sm text-muted-foreground">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
                   <div
                     key={i}
-                    className="w-8 h-8 rounded-full bg-primary/20 border-2 border-background"
+                    className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary/20 border-2 border-background"
                   />
                 ))}
               </div>
