@@ -134,9 +134,9 @@ const Chatbot = () => {
                 } gap-12 items-center group`}
               >
                 {/* Visual Side */}
-                <div className="flex-1 relative">
+                <div className="flex-1 relative sm:flex sm:justify-left">
                   <div
-                    className={`relative aspect-square rounded-3xl bg-gradient-to-br ${feature.gradient} border border-border/50 p-12 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-500`}
+                    className={`relative aspect-square sm:h-52 rounded-3xl bg-gradient-to-br ${feature.gradient} border border-border/50 p-12 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-500`}
                   >
                     {/* Decorative grid */}
                     <div className="absolute inset-0 opacity-10">
@@ -153,15 +153,17 @@ const Chatbot = () => {
                     {/* Large icon */}
                     <div className="relative z-10">
                       <div
-                        className={`w-32 h-32 rounded-3xl ${feature.bgAccent} backdrop-blur-sm flex items-center justify-center group-hover:rotate-6 transition-transform duration-500`}
+                        className={`w-32 h-32 rounded-3xl sm:rounded-xl sm:w-16 sm:h-16 ${feature.bgAccent} backdrop-blur-sm flex items-center justify-center group-hover:rotate-6 transition-transform duration-500`}
                       >
-                        <Icon className={`h-16 w-16 ${feature.accentColor}`} />
+                        <Icon
+                          className={`h-16 w-16 sm:h-8 sm:w-8 ${feature.accentColor}`}
+                        />
                       </div>
                     </div>
 
                     {/* Floating stats badge */}
-                    <div className="absolute top-8 right-8 bg-background/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-border">
-                      <div className="text-3xl font-bold">
+                    <div className="absolute top-8 right-8 sm:top-1 sm:right-1 sm:rounded-xl sm:p-3 bg-background/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-border">
+                      <div className="text-3xl font-bold sm:text-sm">
                         {feature.stats.value}
                       </div>
                       <div className="text-xs text-muted-foreground">
