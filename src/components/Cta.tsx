@@ -80,7 +80,7 @@ const Cta = () => {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full h-12 sm:h-14 text-base sm:text-lg font-medium tracking-wide bg-gradient-to-br from-[#DE3A8B]/90 to-[#DE3A8B] hover:from-[#DE3A8B] hover:to-[#c42e7e] text-white rounded-xl shadow-md group transition-all duration-300"
+                className="w-full h-12 sm:h-14 text-sm sm:text-lg font-medium tracking-wide bg-gradient-to-br from-[#DE3A8B]/90 to-[#DE3A8B] hover:from-[#DE3A8B] hover:to-[#c42e7e] text-white rounded-xl shadow-md group transition-all duration-300"
               >
                 Démarrer ma Transformation IA
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

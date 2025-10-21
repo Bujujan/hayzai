@@ -139,16 +139,16 @@ const Chatbot = () => {
                     className={`relative aspect-square rounded-2xl sm:rounded-3xl bg-gradient-to-br ${feature.gradient} border border-border/50 p-8 sm:p-12 flex items-center justify-center overflow-hidden group-hover:scale-[1.03] transition-transform duration-500`}
                   >
                     {/* Decorative grid */}
-                    <div className="absolute inset-0 opacity-10">
+                    {/* <div className="absolute inset-0">
                       <div
                         className="absolute inset-0"
                         style={{
-                          backgroundImage:
-                            "radial-gradient(circle, currentColor 1px, transparent 1px)",
+                          // backgroundImage:
+                          //   "radial-gradient(circle, currentColor 1px, transparent 1px)",
                           backgroundSize: "20px 20px",
                         }}
                       />
-                    </div>
+                    </div> */}
 
                     {/* Icon */}
                     <div className="relative z-10">
