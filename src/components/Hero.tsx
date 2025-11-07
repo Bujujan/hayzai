@@ -8,7 +8,7 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <section className="min-h-[90vh] w-full flex justify-center items-center px-4 sm:px-8 md:px-12 text-center relative bg-cover overflow-hidden">
-      <div className="flex flex-col-reverse lg:flex-row justify-center items-center gap-10 lg:gap-20 w-full max-w-7xl mx-auto">
+      <div className="flex flex-col-reverse lg:flex-row justify-center items-center gap-10 lg:gap-20 w-full max-w-8xl mx-auto">
         {/* Left content */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left relative z-10">
           <Badge className="mb-4 sm:mb-6 text-xs sm:text-sm font-medium text-white/80 bg-primary/10 rounded-full border border-primary/20">
@@ -18,9 +18,10 @@ const Hero = () => {
           <Herotext />
 
           <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-3xl leading-relaxed mb-6 sm:mb-8">
-            Maximisez votre ROI, optimisez vos performances et prenez
-            l&apos;avantage concurrentiel grâce à notre expertise en
-            intelligence artificielle.
+            Générez, qualifiez et convertissez vos leads automatiquement. Agents
+            IA 24/7 pour répondre et prendre des rendez-vous + campagnes
+            d&apos;email IA ultra-personnalisées pour prospecter et relancer à
+            grande échelle.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center w-full">
@@ -43,7 +44,7 @@ const Hero = () => {
             alt="Hero"
             width={1000}
             height={100}
-            className="w-[90%] sm:w-[80%] md:w-[60%] lg:w-[1000px] h-auto"
+            className="w-[90%] sm:w-[80%] md:w-[60%] lg:w-[1500px] h-auto"
           />
         </div>
       </div>
